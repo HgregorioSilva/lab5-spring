@@ -1,4 +1,4 @@
-package com.fatec.lab5;
+package br.gov.sp.fatec.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
