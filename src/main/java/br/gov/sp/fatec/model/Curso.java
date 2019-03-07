@@ -25,7 +25,7 @@ public class Curso {
 	@Column(name="CUR_MATERIAS", unique=true, length=500, nullable=false)
 	private String materias;
 	
-	@Column(name="CUR_NOME", unique=true, length=50, nullable=false)
+	@Column(name="CUR_DURACAO", unique=true, length=50, nullable=false)
 	private String duracao;
 	
 	public Curso() {
