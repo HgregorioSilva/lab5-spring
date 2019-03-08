@@ -11,7 +11,7 @@ public interface CursoRepository extends CrudRepository<Curso, Long> {
 
 	public Curso findByNome(String nome);
 	
-	@Query("select u from Usuario u where u.nome like %?1%")
+	@Query("select u from Curso u where u.nome like %?1%")
 	public List<Curso> buscaCurso(String nome);
 	
 }
