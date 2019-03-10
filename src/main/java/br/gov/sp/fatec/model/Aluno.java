@@ -1,10 +1,21 @@
 package br.gov.sp.fatec.model;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class Aluno {
-
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="ALU_ID")
+	private long id;
+	
+	
 	String nome;
 	int idade;
 	int semestre;
