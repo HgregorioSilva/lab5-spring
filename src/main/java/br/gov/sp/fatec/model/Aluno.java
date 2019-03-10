@@ -30,6 +30,10 @@ public class Aluno {
 	@Column(name="ALU_SEXO", unique=true, length=1, nullable=false)
 	char sexo;
 	
+	public Aluno() {
+		super();
+	}
+	
 	public String getNome() {
 		return nome;
 	}
