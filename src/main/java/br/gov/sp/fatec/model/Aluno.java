@@ -34,6 +34,15 @@ public class Aluno {
 		super();
 	}
 	
+	public Aluno(int id, String nome, int idade, int semestre, String ra, char sexo) {
+		this.id = id;
+		this.nome = nome;
+		this.idade = idade;
+		this.semestre = semestre;
+		this.ra = ra;
+		this.sexo = sexo;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
