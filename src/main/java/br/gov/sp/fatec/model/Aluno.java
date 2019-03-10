@@ -18,8 +18,10 @@ public class Aluno {
 	@Column(name="ALU_NOME", unique=true, length=50, nullable=false)
 	String nome;
 	
-	
+	@Column(name="ALU_IDADE", unique=true, length=50, nullable=false)
 	int idade;
+	
+	
 	int semestre;
 	String ra;
 	char sexo;
