@@ -24,8 +24,10 @@ public class Aluno {
 	@Column(name="ALU_SEMESTRE", unique=true, length=50, nullable=false)
 	int semestre;
 	
-	
+	@Column(name="ALU_RA", unique=true, length=50, nullable=false)
 	String ra;
+	
+	@Column(name="ALU_SEXO", unique=true, length=50, nullable=false)
 	char sexo;
 	
 	public String getNome() {
