@@ -15,7 +15,7 @@ public class Aluno {
 	@Column(name="ALU_ID")
 	private long id;
 	
-	@Column(name="ALU_NOME", unique=true, length=50, nullable=false)
+	@Column(name="ALU_NOME", unique=true, length=60, nullable=false)
 	String nome;
 	
 	@Column(name="ALU_IDADE", unique=true, length=50, nullable=false)
