@@ -1,20 +1,43 @@
 package br.gov.sp.fatec;
 
-import java.util.ArrayList;
-
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import br.gov.sp.fatec.model.Autorizacao;
-import br.gov.sp.fatec.model.Usuario;
-import br.gov.sp.fatec.repository.AutorizacaoRepository;
-import br.gov.sp.fatec.repository.UsuarioRepository;
-import br.gov.sp.fatec.service.UsuarioService;
+import br.gov.sp.fatec.model.Aluno;
+import br.gov.sp.fatec.model.Curso;
+import br.gov.sp.fatec.repository.AlunoRepository;
+import br.gov.sp.fatec.repository.CursoRepository;
 
 public class App 
 {
 
 	public static void main( String[] args )
     { 
+		
+		AnnotationConfigApplicationContext context = 
+				new AnnotationConfigApplicationContext(DIConfig.class);
+		
+		CursoRepository cursoRepo = (CursoRepository) context.getBean("cursoRepository");
+		AlunoRepository alunoRepo = (AlunoRepository) context.getBean("alunoRepository");
+		
+		Curso curso1 = new Curso();
+		curso1.setNome("Banco de dados");
+		cursoRepo.save(curso1);
+		
+		Aluno aluno1 = new Aluno();
+		Aluno aluno2 = new Aluno();
+		
+		aluno1.setNome("Everton");
+		aluno2.setNome("Augusto");
+		
+		aluno1.setCurso(curso1);
+		aluno2.setCurso(curso1);
+		
+		alunoRepo.save(aluno1);
+		alunoRepo.save(aluno2);
+		
+		context.close();
+		
+		/*
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(DIConfig.class);
  
@@ -96,7 +119,7 @@ public class App
 		autorizacaoRepo.delete(autorizacao2);
 		
 		context.close();
-
+		 */
     }
     
 }
