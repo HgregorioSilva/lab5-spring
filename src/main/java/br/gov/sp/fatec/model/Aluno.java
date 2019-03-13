@@ -1,3 +1,4 @@
+
 package br.gov.sp.fatec.model;
 
 import javax.persistence.Column;
