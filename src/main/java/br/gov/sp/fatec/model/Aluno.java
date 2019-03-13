@@ -5,6 +5,8 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import org.springframework.stereotype.Component;
 
@@ -30,6 +32,10 @@ public class Aluno {
 	
 	@Column(name="ALU_SEXO", unique=true, length=1, nullable=false)
 	char sexo;
+	
+	@ManyToOne
+	@JoinColumn(name="CUR_ID")
+	private Curso curso;
 	
 	public Aluno() {
 		super();
