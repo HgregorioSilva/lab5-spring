@@ -2,4 +2,5 @@
 Fullstack project with Java / Spring + Vue.js
 
 Description:<br>
-Relationship @OneToMany
+Relationship @OneToMany <br>
+2 repository tests
