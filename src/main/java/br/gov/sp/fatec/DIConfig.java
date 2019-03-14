@@ -43,6 +43,7 @@ public class DIConfig {
 	    vendorAdapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
 	    vendorAdapter.setGenerateDdl(false);
 	    vendorAdapter.setShowSql(true);
+	    
 
 	    LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 	    factory.setJpaVendorAdapter(vendorAdapter);

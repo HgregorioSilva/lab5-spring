@@ -2,15 +2,16 @@
 package br.gov.sp.fatec.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-import org.springframework.stereotype.Component;
-
-@Component
+@Entity
+@Table(name = "ALU_ALUNO")
 public class Aluno {
 	
 	@Id
@@ -37,18 +38,18 @@ public class Aluno {
 	@JoinColumn(name="CUR_ID")
 	private Curso curso;
 	
-	public Aluno() {
-		super();
-	}
-	
-	public Aluno(int id, String nome, int idade, int semestre, String ra, char sexo) {
-		this.id = id;
-		this.nome = nome;
-		this.idade = idade;
-		this.semestre = semestre;
-		this.ra = ra;
-		this.sexo = sexo;
-	}
+//	public Aluno() {
+//		super();
+//	}
+//	
+//	public Aluno(int id, String nome, int idade, int semestre, String ra, char sexo) {
+//		this.id = id;
+//		this.nome = nome;
+//		this.idade = idade;
+//		this.semestre = semestre;
+//		this.ra = ra;
+//		this.sexo = sexo;
+//	}
 	
 	public String getNome() {
 		return nome;
@@ -88,5 +89,13 @@ public class Aluno {
 	
 	public void setSexo(char sexo) {
 		this.sexo = sexo;
+	}
+	
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
 }
